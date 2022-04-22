@@ -57,6 +57,7 @@ body {
 
 .title {
   color: var(--title-text-color);
+  margin: 0;
 }
 
 .header-div {
@@ -220,13 +221,40 @@ body {
 .features-section {
   display: block;
   margin-left: auto;
-  margin-right: auto;
   width: 270px;
+}
+
+.features-section::before {
+  content:"";
+  display: block;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color:#F5F4FA;
+  border-radius: 4px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 70px 70px;
+}
+
+.icon-antenna::before {
+  background-image: url(../img/antenna.svg);
+ }
+
+.icon-clock::before {
+  background-image: url(../img/clock.svg);
+}
+
+.icon-diagram::before {
+  background-image: url(../img/diagram.svg);
+}
+
+.icon-astronaut::before {
+  background-image: url(../img/astronaut.svg);
 }
 
 .features-list-title {
   display: block;
-  margin: 0 0 10px 0;
+  padding: 0;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -236,7 +264,7 @@ body {
 
 .features-list-text {
   display: block;
-  margin: 0;
+  margin: 10px 0 0 0;
   font-size: 14px;
   line-height: 1.71;
   color: var(--primary-text-color);
