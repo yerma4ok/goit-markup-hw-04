@@ -5,6 +5,7 @@
   --color-header: #000000;
   --color-text-reserve: #ffffff;
   --color-footer-contacts: rgba(255, 255, 255, 0.6);
+  --color-icons: #afb1b8;
 }
 
 body {
@@ -63,9 +64,9 @@ body {
 .header-div {
   display: flex;
   align-items: center;
- }
+}
 
- .contacts-list > .iten {
+.contacts-list > .iten {
   display: flex;
   align-items: center;
 }
@@ -129,7 +130,7 @@ body {
 }
 
 .contacts .contacts-info {
-  display: block;
+  display: flex;
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -144,42 +145,38 @@ body {
 .header-icon {
   margin-right: 10px;
   fill: var(--primary-text-color);
- }
-
+}
 
 .contacts-list .contacts-info:hover,
 .contacts-list .contacts-info:focus {
   color: var(--activ-color);
-  }
+}
 
-
-.contacts-list .header-icon:hover,
-.contacts-list .header-icon:focus {
+.contacts-list .header-icon:hover {
   fill: var(--activ-color);
 }
 
-
 .heading-div {
   padding-bottom: 94px;
- }
+}
 
- .heading {
- background-color: #C4C4C4;
- height: 600px;
- padding-top: 200px;
- background-image:
- linear-gradient(
-    to right,
-  rgba(47, 48, 58, 0.4),
-  rgba(47, 48, 58, 0.4)
-  ), url(../img/hero.jpg);
-  
+.heading {
+  background-color: #c4c4c4;
+  height: 600px;
+  padding-top: 200px;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../img/hero.jpg);
+
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  }
+}
 
- .heading-text {
+.heading-text {
   display: block;
   margin: 0 252px;
   text-align: center;
@@ -216,7 +213,7 @@ body {
 
 .container > .button-heading-activ:hover,
 .container > .button-heading-activ:focus {
-  background-color: #188CE8;
+  background-color: #188ce8;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border-color: var(--activ-color);
@@ -244,13 +241,13 @@ body {
 .icon-div {
   display: flex;
   height: 120px;
-  margin-bottom:30px;  
-  background-color:#F5F4FA;
+  margin-bottom: 30px;
+  background-color: #f5f4fa;
   border-radius: 4px;
   justify-content: center;
   align-items: center;
-  }
- 
+}
+
 .features-icon {
   width: 70px;
   height: 70px;
@@ -279,7 +276,7 @@ body {
   display: block;
   margin: 0 0 50px 0;
   text-align: center;
-  
+
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -302,13 +299,13 @@ body {
   background-color: #f5f4fa;
   padding-top: 94px;
   padding-bottom: 94px;
-  }
+}
 
 .user-team-title {
   display: block;
   margin: 0;
   text-align: center;
-    padding-bottom: 50px;
+  padding-bottom: 50px;
 
   font-weight: 700;
   font-size: 36px;
@@ -345,7 +342,7 @@ body {
   display: block;
   margin: 0 0 10px 0;
   text-align: center;
-   
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -356,11 +353,93 @@ body {
   display: block;
   margin: 0;
   text-align: center;
-  
+
   font-size: 16px;
   line-height: 1.17;
   color: var(--primary-text-color);
   letter-spacing: 0.03em;
+}
+
+.box {
+  display: block;
+  margin-top: 16px;
+}
+
+.team-box {
+  display: flex;
+  justify-content: center;
+}
+
+.box-list {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+.box-list:not(:last-child) {
+  margin-right: 10px;
+}
+
+.user-icon {
+  fill: var(--color-icons);
+  margin: 12px;
+}
+.box-activ {
+  background-color: #2196f3;
+}
+
+.icon-activ {
+  fill: var(--color-text-reserve);
+}
+
+.box-list:hover {
+  background-color: #2196f3;
+}
+
+.user-icon:hover {
+  fill: var(--color-text-reserve);
+}
+
+.user-client {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.client-list {
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 0;
+}
+
+.client-list:not(:last-child) {
+  margin-right: 30px;
+}
+
+.client-list .user-icon {
+  fill: var(--color-icons);
+  margin: 16px 32px;
+  padding: 0;
+}
+
+.client-activ {
+  border: 1px solid #2196f3;
+}
+
+.client-list .icon-activ {
+  fill: var(--activ-color);
+}
+
+.client-list:hover {
+  border: 1px solid #2196f3;
+}
+
+.client-list .user-icon:hover {
+  fill: var(--activ-color);
 }
 
 /*--------------------------footer----------------------------*/
@@ -411,15 +490,37 @@ body {
   color: var(--color-text-reserve);
 }
 
+.footer-title {
+  display: block;
+  margin: 0;
+  text-align: left;
+  padding-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--color-text-reserve);
+}
+
+.footer-container {
+  display: flex;
+}
+
+.footer-box {
+  margin-top: 12px;
+  margin-left: 70px;
+}
+
 /*--------------------------portfolio----------------------------*/
 .portfolio-section {
   padding-bottom: 94px;
   padding-top: 94px;
 }
 
-
 .button-list-div {
- margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 .button-list {
@@ -448,7 +549,8 @@ body {
   border-color: var(--activ-color);
   letter-spacing: 0.03em;
   border-radius: 4px;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .button-current {
@@ -474,7 +576,8 @@ body {
   color: var(--color-text-reserve);
   background-color: #2196f3;
   border-color: var(--activ-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .user-portfolio-items {
@@ -515,7 +618,7 @@ body {
 .user-portfolio-name {
   display: block;
   margin: 0 0 4px 0;
-  
+
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -525,9 +628,41 @@ body {
 .user-portfolio-type {
   display: block;
   margin: 0;
-    
+
   font-size: 16px;
   line-height: 1.88;
   color: var(--primary-text-color);
   letter-spacing: 0.03em;
+}
+
+.footer-box .box-list {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  padding: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-box .box-list:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer-box .user-icon {
+  fill: var(--color-text-reserve);
+  margin: 12px;
+}
+.footer-box .box-activ {
+  background-color: #2196f3;
+}
+
+.footer-box .icon-activ {
+  fill: var(--color-text-reserve);
+}
+
+.footer-box .box-list:hover {
+  background-color: #2196f3;
+}
+
+.footer-box .user-icon:hover {
+  fill: var(--color-text-reserve);
 }
