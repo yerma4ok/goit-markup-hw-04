@@ -386,13 +386,6 @@ body {
   fill: var(--color-icons);
   margin: 12px;
 }
-.box-activ {
-  background-color: #2196f3;
-}
-
-.icon-activ {
-  fill: var(--color-text-reserve);
-}
 
 .box-list:hover {
   background-color: #2196f3;
@@ -650,13 +643,6 @@ body {
 .footer-box .user-icon {
   fill: var(--color-text-reserve);
   margin: 12px;
-}
-.footer-box .box-activ {
-  background-color: #2196f3;
-}
-
-.footer-box .icon-activ {
-  fill: var(--color-text-reserve);
 }
 
 .footer-box .box-list:hover {
